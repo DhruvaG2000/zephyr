@@ -1,0 +1,7 @@
+# TI AM62X M4 Core configuration
+
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_TI_AM62X_M4_CORE
+
+endif # BOARD_AM62X_M4_CORE

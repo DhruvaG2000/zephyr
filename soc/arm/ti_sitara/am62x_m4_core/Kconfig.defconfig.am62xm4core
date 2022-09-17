@@ -1,0 +1,17 @@
+# TI SimpleLink AM62X M4 CORE
+
+# Copyright (c) 2022, Dhruva Gole
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_AM62X_M4_CORE
+
+config SOC
+	default "msp432p401r"
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default 48000000
+
+config NUM_IRQS
+	default 64
+
+endif # SOC_AM62_M4

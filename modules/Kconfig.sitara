@@ -1,0 +1,30 @@
+# CC3220/CC32XX SDK HAL configuration
+
+config HAS_CC3220SDK
+	bool
+
+# Notes:
+# SimpleLink drivers require types (stdint.h) from c library which is not
+# provided by minimal lbc
+# Selecting ERRNO lets host driver use Zephyr's __errno
+# Selecting PTHREAD_IPC and POSIX_API are needed to build the host driver
+config SITARA_HOST_DRIVER
+	bool "Build the SimpleLink WiFi Host Driver"
+	depends on MULTITHREADING
+	select REQUIRES_FULL_LIBC
+	select ERRNO
+	select PTHREAD_IPC
+	select POSIX_CLOCK
+	help
+	  Build the Sitara host driver
+
+# MSP432 SDK HAL configuration
+
+config HAS_AM62X_M4_CORE_SDK
+	bool
+	select HAS_CMSIS_CORE
+
+# TI Sitara AM62x SDK HAL configuration (not sure)?
+
+config HAS_CC13X2_CC26X2_SDK
+	bool

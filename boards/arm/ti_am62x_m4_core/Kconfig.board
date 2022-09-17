@@ -1,0 +1,8 @@
+# TI SimpleLink MSP-EXP432P401R LaunchXL Development Board
+
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_TI_AM62X_M4_CORE
+	bool "TI AM62X_M4_CORE"
+#	depends on SOC_SITARA
+	select SOC_AM62X_M4_CORE

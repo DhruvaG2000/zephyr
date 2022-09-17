@@ -1,0 +1,10 @@
+identifier: ti_am62x_m4_core
+name: ti_am62x_m4_core
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 64
+flash: 256

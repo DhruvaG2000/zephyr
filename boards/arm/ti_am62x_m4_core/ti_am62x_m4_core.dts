@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+
+/dts-v1/;
+
+#include <ti/am62x_m4_core.dtsi>
+
+/ {
+	model = "TI AM62X M4 CORE";
+	compatible = "ti,am62xm4core";
+
+	chosen {
+		zephyr,sram = &dram;
+		zephyr,flash = &flash0;
+	};
+};
+
+&cpu0 {
+	clock-frequency = <48000000>;
+};
+
+/* TODO: UART
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+};
+*/
