@@ -10,6 +10,7 @@
 
 	chosen {
 		zephyr,sram = &dram;
+		zephyr,flash = &flash0;
 	};
 };
 
