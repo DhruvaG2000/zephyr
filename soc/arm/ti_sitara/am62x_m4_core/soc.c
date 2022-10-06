@@ -9,7 +9,7 @@
 #include <zephyr/init.h>
 #include <soc.h>
 
-static int ti_msp432p4xx_init(const struct device *arg)
+static int ti_am62x_m4_core_init(const struct device *arg)
 {
 	ARG_UNUSED(arg);
 
@@ -18,4 +18,4 @@ static int ti_msp432p4xx_init(const struct device *arg)
 	return 0;
 }
 
-SYS_INIT(ti_msp432p4xx_init, PRE_KERNEL_1, 0);
+SYS_INIT(ti_am62x_m4_core_init, PRE_KERNEL_1, 0);

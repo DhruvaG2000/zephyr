@@ -6,7 +6,7 @@
 if SOC_AM62X_M4_CORE
 
 config SOC
-	default "msp432p401r"
+	default "am62xm4core"
 
 config SYS_CLOCK_HW_CYCLES_PER_SEC
 	default 48000000

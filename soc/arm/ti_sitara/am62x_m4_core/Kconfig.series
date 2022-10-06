@@ -1,15 +1,11 @@
-# TI SimpleLink MSP432P4XX
-
-# Copyright (c) 2017, Linaro Ltd
+# TI AM62x M4FSS
 # SPDX-License-Identifier: Apache-2.0
 
-config SOC_SERIES_MSP432P4XX
-	bool "TI SimpleLink Family MSP432P4XX"
+config SOC_SERIES_AM62XM4CORE
+	bool "TI AM62X SITARA M4FSS"
 	select ARM
 	select CPU_CORTEX_M4
 	select CPU_CORTEX_M_HAS_DWT
 	select DYNAMIC_INTERRUPTS
-	select SOC_FAMILY_TISIMPLELINK
-	select CPU_HAS_FPU
 	help
-	  Enable support for TI SimpleLink MSP432P4XX.
+	  Enable support for TI AM62x M4FSS
