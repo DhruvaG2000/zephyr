@@ -27,8 +27,6 @@
 
 	/* TODO Serial flash */
 	flash0: memory@0 {
-		compatible = "serial-flash";
-		/* reg = <0x0 DT_SIZE_K(1024)>;
 	};
 
 
