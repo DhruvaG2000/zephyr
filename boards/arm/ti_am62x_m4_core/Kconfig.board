@@ -1,0 +1,8 @@
+# TI AM62 sk EVM M4FSS
+
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_TI_AM62X_M4_CORE
+	bool "TI AM62X_M4_CORE"
+#	depends on SOC_SITARA
+	select SOC_AM62X_M4_CORE

@@ -1,0 +1,11 @@
+# TI AM62x M4FSS
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_AM62XM4CORE
+	bool "TI AM62X SITARA M4FSS"
+	select ARM
+	select CPU_CORTEX_M4
+	select CPU_CORTEX_M_HAS_DWT
+	select DYNAMIC_INTERRUPTS
+	help
+	  Enable support for TI AM62x M4FSS

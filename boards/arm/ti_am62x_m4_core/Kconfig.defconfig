@@ -1,0 +1,7 @@
+# TI AM62X SK M4 CORE configuration
+
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD
+	default "am62xm4core"
+	depends on BOARD_TI_AM62X_M4_CORE

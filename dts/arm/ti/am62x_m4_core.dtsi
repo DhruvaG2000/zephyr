@@ -1,0 +1,53 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+
+#include <mem.h>
+#include <freq.h>
+#include <arm/armv7-m.dtsi>
+
+/ {
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu0: cpu@0 {
+			compatible = "arm,cortex-m4f";
+			reg = <0>;
+		};
+	};
+
+	iram: memory@0 {	/* Not sure about this again, start at 0 maybe? */
+		compatible = "mmio-sram";
+		reg = <0x00000000 DT_SIZE_K(192)>;	/* 192 KB of SRAM (I-Code) */
+	};
+
+	dram: memory1@40000000 {
+		compatible = "mmio-sram";
+		reg = <0x40000000 DT_SIZE_K(64)>;
+	};
+
+	/* TODO Serial flash */
+	flash0: memory@0 {
+	};
+
+
+	sysclk: system-clock {
+		compatible = "fixed-clock";
+		clock-frequency = <48000000>;	/* Couldn't find this in TRM */
+		#clock-cells = <0>;
+	};
+
+	/* TODO: SOC
+	soc {
+		uart0: uart@40001000 {
+			compatible = "ti,msp432p4xx-uart";
+			reg = <0x40001000 0x400>;
+			interrupts = <32 0>;
+			clocks = <&sysclk>;
+			status = "disabled";
+		};
+	};	 */
+};
+
+&nvic {
+	arm,num-irq-priority-bits = <3>;	/* Might need changing */
+};
