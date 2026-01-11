@@ -1,0 +1,13 @@
+# Texas Instruments Sitara AM62x M4 core
+
+# Copyright (c) 2022, Dhruva Gole
+# SPDX-License-Identifier: Apache-2.0
+
+choice
+	prompt "TI Sitara M4 Core Selection"
+	depends on SOC_SERIES_TISITARA
+
+config SOC_TISITARA
+	bool "TISITARA"
+	select HAS_AM62X_M4_CORE_SDK
+endchoice

@@ -1,0 +1,13 @@
+# TI AM62x M4FSS
+
+# Copyright (c) 2017, Linaro Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_SERIES_AM62XM4CORE
+
+source "soc/arm/ti_sitara/am62x_m4_core/Kconfig.defconfig.am62xm4core*"
+
+config SOC_SERIES
+	default "am62xm4core*"
+
+endif # SOC_SERIES_AM62XM4CORE

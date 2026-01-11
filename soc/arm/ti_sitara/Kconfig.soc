@@ -1,0 +1,5 @@
+# Texas Instruments Sitara Family
+
+# SPDX-License-Identifier: Apache-2.0
+
+source "soc/arm/ti_sitara/*/Kconfig.series"
